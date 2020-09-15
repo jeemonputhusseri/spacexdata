@@ -78,7 +78,7 @@ class Layout extends Component {
                     }
                 </ul>
                 <h6>Launch Year: <span>{item.launch_year}</span></h6>
-                <h6>Successful Launch: <span>{item.launch_success.toString()}</span></h6>
+                <h6>Successful Launch: <span>{item.launch_success && item.launch_success.toString()}</span></h6>
                 <h6>Successful Landing: <span>{item.launch_landing && item.launch_landing.toString()}</span></h6>
             </div></div>)
         })
