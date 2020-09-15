@@ -8,7 +8,7 @@ class AppRouter extends Component {
         return (
             <Switch>
                 <Route exact path="/" component={Layout} />
-                <Route path="/launches" render={(props) => <Layout {...props}/>} />
+                <Route path="/launches" component={Layout} />
             </Switch>
         );
     }
