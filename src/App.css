@@ -1,38 +1,212 @@
-.App {
+body{
+  background: #F2F2F2;
+}
+.container{
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #F2F2F2;
+}
+.filterWrapC{
+  width: 220px;
+  display: inline-block;
+  position: sticky;
+  top:0;
+  vertical-align: top;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.filterWrapC > div{
+  background: white;
+  padding: 12px;
+}
+.filterWrapC  p{
+  text-decoration: underline;
+}
+.flightSectionC{
+  width:calc(100% - 220px);
+  display: inline-block;
+  padding-bottom: 38px;
+}
+.flightSingleWrap{
+  display: inline-block;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 20px;
+  flex-direction: column;
+  vertical-align: top;
+}
+.flightWrap{
+  background: white;
+  padding: 24px;
+}
+.flightWrap img{
+  max-width: 100%;
+  background: #F2F2F2;
+  width: 100%;
+}
+.filterButtons{
+  width: 44%;
+  border: none;
+  background: #C5E09B;
+  border-radius: 3px;
+  padding: 6px;
+  margin: 3px;
+  cursor: pointer;
+  text-transform: capitalize
+}
+.filterButtons:hover{
+  background: #C5E09B;
+}
+.filterButtons.selected{
+  background: #7ABA02;
+}
+.flightTitle{
+  color:#4D5093;
+}
+h6 > span, h5 + ul > li{
+  font-weight: 400;
+  color:#4D5093;
+}
+.footer{
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 10px;
+}
+.footer span{
+  font-size: 13px
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 699px){
+
+  .filterWrapC{
+    width:100%;
+    position: static;
+  }
+  .filterWrapC > div{
+  }
+  .flightSectionC{
+    width:calc(100%);
+  }
+  .flightSingleWrap{
+    width: 100%;
+  }
+  .filterButtons{
+    padding: 6px;
+    margin: 3px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media screen and (max-width: 1024px) and (min-width: 700px){
 
-.App-link {
-  color: #61dafb;
-}
+  .filterWrapC{
+    width:200px;
+    position: static;
+  }
+  .filterWrapC > div{
+  }
+  .flightSectionC{
+    width:calc(100% - 200px);
+  }
+  .flightSingleWrap{
+    width: 50%;
+  }
+  .filterButtons{
+    padding: 6px;
+    margin: 3px;
+  }
 
-@keyframes App-logo-spin {
-  from {
+}
+/* pure CSS Loader */
+.lds-roller {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8aac54;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
